@@ -37,14 +37,14 @@ public class ChangeTextTests {
     @Test
     public void changeEmptyTextTest() {
 
-        String previosText;
-        previosText = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged").getText();
+        String previousText;
+        previousText = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged").getText();
         MobileElement el1 = (MobileElement) driver.findElementById("ru.netology.testing.uiautomator:id/userInput");
         el1.sendKeys("   ");
         MobileElement el2 = (MobileElement) driver.findElementById("ru.netology.testing.uiautomator:id/buttonChange");
         el2.click();
         String result = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged").getText();
-        Assertions.assertEquals(previosText, result);
+        Assertions.assertEquals(previousText, result);
 
     }
 
